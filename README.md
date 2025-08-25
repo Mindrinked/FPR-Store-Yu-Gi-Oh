@@ -31,6 +31,6 @@ Layout:
 ==  CLONE DE REPOSITÓRIO  ==
 
     -   git clone https://github.com/Mindrinked/FPR-Store-Yu-Gi-Oh.git
-    -   cd 
+    -   cd FPR-Store-Yu-Gi-Oh
     -   npm i
     -   npm run dev
