@@ -1,0 +1,200 @@
+.container {
+    min-width: 0
+}
+
+/* toolbar */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+    gap: 16px;
+    flex-wrap: wrap
+}
+
+.toolbar__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.toolbar__left select {
+    padding: 6px 8px;
+}
+
+.toolbar .count {
+    color: #666;
+    font-size: 14px
+}
+
+/* paginação */
+.paginacao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.paginacao button {
+    border: none;
+    padding: 6px 10px;
+    background: #D9D9D9;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.paginacao button.ativo {
+    background: #34AC40;
+    color: #fff;
+}
+
+.paginacao button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.paginacao span {
+    padding: 0 6px;
+    color: #777
+}
+
+/* grid */
+.grid,
+.lista-cards {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+@media (max-width:1199px) {
+
+    .grid,
+    .lista-cards {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+@media (max-width:1023px) {
+
+    .grid,
+    .lista-cards {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media (max-width:767px) {
+
+    .grid,
+    .lista-cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:380px) {
+
+    .grid,
+    .lista-cards {
+        grid-template-columns: 1fr
+    }
+}
+
+.card {
+    background: #fff;
+    padding: 10px;
+    text-align: center
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px
+}
+
+.card h3 {
+    font-size: .95rem;
+    min-height: 40px
+}
+
+.card .price {
+    color: #34AC40;
+    font-weight: 700;
+    margin: 6px 0
+}
+
+.card .buy {
+    width: 100%;
+    border: none;
+    padding: 10px 12px;
+    background: #34AC40;
+    color: #fff;
+    cursor: pointer
+}
+
+.card .buy:hover {
+    filter: brightness(.95)
+}
+
+@media (max-width: 375px) {
+    .toolbar {
+        gap: 8px;
+    }
+
+    .toolbar__left {
+        gap: 6px;
+    }
+
+    .toolbar__left label {
+        font-size: 14px;
+    }
+
+    .toolbar__left select {
+        height: 34px;
+        padding: 4px 8px;
+    }
+
+    .toolbar .count {
+        font-size: 12px;
+    }
+
+    .paginacao {
+        gap: 4px;
+    }
+
+    .paginacao button {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .paginacao span {
+        padding: 0 4px;
+    }
+
+    .grid,
+    .lista-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .card {
+        padding: 8px;
+    }
+
+    .card h3 {
+        font-size: .88rem;
+        min-height: 36px;
+    }
+
+    .card .price {
+        margin: 4px 0;
+    }
+
+    .card .buy {
+        padding: 8px 10px;
+        font-size: .9rem;
+    }
+}

@@ -1,0 +1,35 @@
+.footer {
+  position: relative;
+  background: #131A0A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 14px 2rem;
+  min-height: 5.625rem
+}
+
+.footer-inner {
+  max-width: min(96vw, 1600px);
+  margin: 0 auto;
+  width: 100%
+}
+
+.footer-footer {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  transform: translateY(-69%);
+  width: 11.25rem;
+  height: auto;
+  pointer-events: none
+}
+
+@media (max-width:375px) {
+  .footer {
+    width: 23.5rem;
+  }
+  .footer-footer {
+    transform: translateY(-69%);
+    width: 8.5rem
+  }
+}

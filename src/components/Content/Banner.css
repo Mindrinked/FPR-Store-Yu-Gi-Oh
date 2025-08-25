@@ -1,0 +1,105 @@
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner input[type="radio"] {
+    display: none;
+}
+
+/* faixa com 3 slides lado a lado */
+.banner .slides {
+    display: flex;
+    width: 300%;
+    transform: translateX(0%);
+    transition: transform .6s ease-in-out;
+}
+
+/* cada slide ocupa 100% da largura do banner */
+.banner .slide {
+    flex: 0 0 100%;
+}
+
+.banner .slide img {
+    width: 1360px;
+    height: auto;
+    display: block;
+    aspect-ratio: auto;
+    object-fit: cover;
+}
+
+/* movimentação via radios */
+#b1:checked~.slides {
+    transform: translateX(0%);
+}
+
+#b2:checked~.slides {
+    transform: translateX(-100%);
+}
+
+#b3:checked~.slides {
+    transform: translateX(-200%);
+}
+
+/* bolinhas de navegação */
+.banner .dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.banner .dots label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffffb0;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: transform .2s, background-color .2s;
+}
+
+/* destaca o dot ativo */
+#b1:checked~.dots label:nth-child(1),
+#b2:checked~.dots label:nth-child(2),
+#b3:checked~.dots label:nth-child(3) {
+    background: #34AC40;
+    transform: scale(1.2);
+}
+
+/* responsivo opcional para telas muito pequenas */
+@media (min-width: 560px) {
+    .banner .slide img {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (min-width: 1366px) {
+    .banner .slide img {
+        width: 1360px;
+        aspect-ratio: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .banner {
+        width: 355px;
+        aspect-ratio: 16 / 9;
+        height: 90px;
+    }
+
+    .banner .slide img {
+        width: 355px;
+    }
+
+    .banner .dots {
+        bottom: 8px;
+    }
+
+    .banner .dots label {
+        width: 8px;
+        height: 8px;
+    }
+}
